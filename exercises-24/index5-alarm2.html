@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body>h1{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 100px;
+            color: white;
+        }
+        .anime1{
+            animation: para linear .5s infinite alternate;
+            background-color: red;
+        }
+        @keyframes para{
+            to{transform: scale(1.2);}
+        }
+    </style>
+</head>
+<body>
+    <audio id="sound" src="sound/1.mp3" loop></audio>
+    <h1>work time!</h1>
+    <script>
+        setInterval(function(){
+            let _h = new Date().getHours()
+            let _m = new Date().getMinutes()
+
+            if(
+                _h == 11 && _m == 37
+            ){
+                _alert()
+            }else if(
+                _h == 11 && _m == 38
+            ){
+                _stop()
+            }
+            if(
+                _h == 14 && _m == 2
+            ){
+                _alert()
+            }else if(
+                _h == 14 && _m == 3
+            ){
+                _stop()
+            }
+            if(
+                _h == 16 && _m == 5
+            ){
+                _alert()
+            }else if(
+                _h == 16 && _m == 6
+            ){
+                _stop()
+            }
+
+
+        }, 1000);
+
+
+
+        function _alert(){
+            document.getElementsByTagName('body')[0].classList.add('anime1')
+            document.getElementById('sound').play()
+        }
+
+        function _stop(){
+            document.getElementsByTagName('body')[0].classList.remove('anime1')
+            document.getElementById('sound').stop()
+        }
+
+
+    </script>
+</body>
+</html>

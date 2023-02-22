@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+   <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(103, 165, 99);
+        }
+        .menu{
+            width: 100%;
+            padding: 20px;
+        }
+        .menu>ul{
+            display: flex;
+            list-style: none;
+            background-color: rgb(107, 226, 174);
+        }
+        .menu>ul>li{
+            padding: 20px;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .menu>ul:first-child>li:hover{
+            background: rgb(8, 81, 13) !important;
+        }
+        .menu>ul:last-child{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li onclick="name(this)" data-check="cat1">product</li>
+            <li onclick="name(this)" data-check="cat2">shop</li>
+            <li onclick="name(this)" data-check="cat3">gallery</li>
+        </ul>
+        <ul></ul>
+    </nav>
+    <script>
+        const cat1 = ['pro1', 'pro', 'pro3', 'pro4']
+        const cat2 = ['shop1', 'shop2']
+        const cat3 = ['gal1', 'gal2','gal3']
+
+        let _li = document.querySelectorAll('.menu>ul:first-child>li')
+
+        function name(self){
+            document.querySelector('.menu>ul:last-child').innerHTML=''
+            for(i=0; i<_li.length; i++){
+                _li[i].style.background='transparent'
+            }
+            self.style.background='white'
+            status = self.getAttribute('data-check')
+            if(status == 'cat1'){
+                for(i=0; i<cat1.length; i++){
+                    temp = document.createElement('li')
+                    temp.innerHTML=cat1[i]
+                    document.querySelector('.menu>ul:last-child').appendChild(temp)
+                }
+            }else if(status == 'cat2'){
+                for(i=0; i<cat2.length; i++){
+                    temp = document.createElement('li')
+                    temp.innerHTML=cat2[i]
+                    document.querySelector('.menu>ul:last-child').appendChild(temp)
+                }
+            }else if(status == 'cat3'){
+                for(i=0; i<cat3.length; i++){
+                    temp = document.createElement('li')
+                    temp.innerHTML=cat3[i]
+                    document.querySelector('.menu>ul:last-child').appendChild(temp)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

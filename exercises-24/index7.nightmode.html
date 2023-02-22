@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing: border-box;
+        }
+        .word{
+            width: 50px;
+            height: 25px;
+            border-radius: 20px;
+            position: fixed;
+            top: 20px;left: 20px;
+            box-shadow: 0 0 10px 1px black;
+            background-color: white;
+            cursor: pointer;
+        }
+        .word>span{
+            display: flex;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: rgb(52, 52, 52);
+            transition: .4s;
+        }
+        .name{
+            transform: translateX(25px);
+            background-color: rgb(188, 188, 188) !important;
+        }
+        main{
+            width: 100%;
+            padding: 200px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            transition: 1s;
+        }
+        main>p{
+            color:inherit;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            justify-content: center;
+            font-size: 30px;
+            margin: 100px 0;
+            transition: 1s;
+        }
+        .mainToggle{
+            background-color: rgb(202, 82, 124) !important;
+            color: rgb(91, 39, 77) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="word" onclick="_toggle()">
+        <span></span>
+    </div>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, nam quas molestiae voluptatum placeat itaque eum perspiciatis aspernatur vel consectetur maxime rem autem quia facilis ea, neque velit facere ullam!</p>
+    </main>
+    <script>
+        function _toggle(){
+            document.querySelector('.word>span').classList.toggle('name')
+            document.getElementsByTagName('main')[0].classList.toggle('mainToggle')
+        }
+        if(
+            ((new Date().getHours()) >= 22 ) ||
+            ((new Date().getHours()) <= 6 )
+        ){
+            _toggle()
+        }
+    </script>
+</body>
+</html>
